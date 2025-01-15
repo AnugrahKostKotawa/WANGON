@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(Images/BLUE.jpg);
+}
+
+.gallery {
+    display:flex;
+    flex-wrap:wrap;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    width: 300px;
+    text-align: center;
+    overflow:hidden;
+    border-radius: 5px;
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.gallery-item img {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin:auto ;
+    border: 5px solid greenyellow;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.image-text{
+    text-align: center;
+    font-size: 26px;
+    color:black;
+    margin-top: 5px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.25);
+}
+
+
+.gallery-title {
+    text-align: center;
+    font-size: 36px; 
+    color: red; 
+    margin-top: 20px; 
+    margin-bottom: 30px; 
+    font-family: Arial, sans-serif;
+    text-transform: uppercase; 
+}
+
+
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .gallery-item {
+        width: 100%; 
+        max-width: 300px; 
+    }
+
+    .gallery-item img {
+        width: 90%; 
+        height: auto; 
+    }
+}
